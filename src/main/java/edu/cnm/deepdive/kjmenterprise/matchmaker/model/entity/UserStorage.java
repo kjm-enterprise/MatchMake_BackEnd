@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.kjmenterprise.matchmaker.entity;
+package edu.cnm.deepdive.kjmenterprise.matchmaker.model.entity;
 
 import java.util.UUID;
 import javax.persistence.Column;
