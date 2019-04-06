@@ -1,10 +1,12 @@
 package edu.cnm.deepdive.kjmenterprise.matchmaker.model.entity;
 
+import java.util.Set;
 import java.util.UUID;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
@@ -25,6 +27,9 @@ public class UserStorage {
 
   @Column(nullable = false, updatable = true)
   private Long userPhotos;
+
+  @ManyToMany
+  Set<UserStorage> matches;
 
   public UUID getId() {
     return id;
