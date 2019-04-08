@@ -4,11 +4,12 @@ import edu.cnm.deepdive.kjmenterprise.matchmaker.model.entity.Match;
 import edu.cnm.deepdive.kjmenterprise.matchmaker.model.entity.UserStorage;
 import java.awt.print.Pageable;
 import java.util.Optional;
+import java.util.UUID;
 import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
-public interface MatchRepository extends CrudRepository {
+public interface MatchRepository extends CrudRepository<Match, UUID> {
 
   Iterable<Match> findAllByOrderByTextAsc();
   Iterable<Match> findAllByTextContainingOrderByTextAsc(String fragment);
