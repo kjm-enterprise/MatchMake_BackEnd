@@ -22,7 +22,15 @@ import org.springframework.hateoas.EntityLinks;
 @Entity
 public class Match implements FlatMatch {
 
+  private enum Reactions {
+    POSITIVE,
+    NEUTRAL,
+    NEGATIVE,
+  }
+
   private static EntityLinks entityLinks;
+
+  
 
   @Id
   @GeneratedValue(generator = "uuid2")
