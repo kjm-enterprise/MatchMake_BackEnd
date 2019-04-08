@@ -48,7 +48,10 @@ public class MatchController {
 
   @PostMapping(value = "{matchId}/users", produces = MediaType.APPLICATION_JSON_VALUE)
   public Match attach(@PathVariable("matchId") UUID matchId, @RequestBody UserStorage userStorage) {
-    return attach(matchId, UserStorage.getId());
+    Match match = get(matchId);
+    match.getMatches().add(userStorage.getId());
+    matchRepository.save(match);
+    return match;
   }
 
   @ResponseStatus(value = HttpStatus.NOT_FOUND, reason = "Resource not found")

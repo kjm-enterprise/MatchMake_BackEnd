@@ -30,7 +30,7 @@ public class Match implements FlatMatch {
 
   private static EntityLinks entityLinks;
 
-  
+
 
   @Id
   @GeneratedValue(generator = "uuid2")
