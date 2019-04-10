@@ -1,3 +1,7 @@
+/**
+ * @authors Kanyon Wyman, Michael Sanchez, James Mattos
+ * @version 1.0
+ */
 package edu.cnm.deepdive.kjmenterprise.matchmaker.model.dao;
 
 import edu.cnm.deepdive.kjmenterprise.matchmaker.model.entity.Match;
