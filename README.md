@@ -35,6 +35,10 @@ This eventually would be used to tie user information to the account.
 
 **NOTE*** app was kept in portrait mode.
 
+**Tools**
+
+Postman - we were able to send and receive data from the server.  
+
 **Devices**
 
 Motorola G6 API 26 - On this device it seemed to work functionally okay. 
@@ -102,11 +106,11 @@ another gamer (although this isn’t the intended purpose, but love happens)
 
 [Wire Frame](docs/wireFrameMatchMaker.png)
 
-[ERD Front End](docs/erd_matchmaker_server_side.png)
+[ERD Back End](docs/erd_matchmaker_server_side.png)
 
 [DDL Placeholder]()
 
-[Front End JavaDoc Placeholder]()
+[Back End JavaDoc Placeholder]()
 
 
 
@@ -144,20 +148,16 @@ implied. See the language governing permissions and limitations under the Licens
 
 ## Deployment Instructions
 
-Step 1 - [Clone Git Repository](https://github.com/kjm-enterprise/MatchMaker) 
+**Step 1** - [Clone Git Repository](https://github.com/kjm-enterprise/MatchMake_BackEnd) 
 
-Step 2 - When creating a new project clone the project from the cloned link generated in the Git Repo for MatchMaker.
+**Step 2** - When creating a new project clone the project from the cloned link generated in the Git Repo for MatchMaker.
 
-Step 3 - DO NOT OPEN THE project when prompted to. Keep the project closed and select the import option.
+**Step 3** - DO NOT OPEN THE project when prompted to. Keep the project closed and select the import option.
 
-Step 4 - Then import the project from Maven and ensure that the Java language level is set at 1.8.
+**Step 4** - Then import the project from Gradle and start the project as a Spring project. Please also make sure that the check boxes for Derby, and Maven are also checked. 
 
-Step 5 - In the dropdown next to the run and debug symbols, create an app configuration and call it "app". This will allow you to build the app fully.
-
-Step 6 - Download a google-services.json file of your own to obtain a key to utilize firebase messaging. 
-those steps [can be found here](https://firebase.google.com/docs/android/setup).
-
-Step 7 - Run the project and your app should be up and running.
+**Step 5** - Run the project and you should see Spring start running in the bottom.  If it shows success you have 
+successfully built the application
 
 ## User Instructions
 
@@ -203,4 +203,4 @@ Aesthetically we would like to make the following improvments:
 * Recycler view of messages received and matches.
 
 
-**[GitHub Link](https://kjm-enterprise.github.io/MatchMaker/)**
+**[GitHub Page Link](https://kjm-enterprise.github.io/MatchMake_BackEnd/)**

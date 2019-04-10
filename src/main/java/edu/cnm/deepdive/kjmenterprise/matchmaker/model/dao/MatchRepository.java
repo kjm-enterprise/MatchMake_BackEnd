@@ -12,11 +12,13 @@ import org.springframework.data.repository.CrudRepository;
 public interface MatchRepository extends CrudRepository<Match, UUID> {
 
   Iterable<Match> findAllByOrderByTextAsc();
+
   Iterable<Match> findAllByTextContainingOrderByTextAsc(String fragment);
 
-  @Query (value = "SELECT * FROM Users ORDER BY id",
-  countQuery = "SELECT count(*) FROM Users",
-  nativeQuery = true)
+  @Query(value = "SELECT * FROM Users ORDER BY id",
+      countQuery = "SELECT count(*) FROM Users",
+      nativeQuery = true)
   Page<UserStorage> findAllUsersWithPagination(Pageable pageable);
+
   Optional<Match> findRandom();
 }

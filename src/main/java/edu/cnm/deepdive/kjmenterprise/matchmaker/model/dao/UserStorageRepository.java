@@ -7,6 +7,7 @@ import java.util.UUID;
 import org.springframework.data.repository.CrudRepository;
 
 public interface UserStorageRepository extends CrudRepository<UserStorage, UUID> {
+
   UserStorage getById(UUID id);
 
   List<UserStorage> getByMatchesContains(Match match);
