@@ -94,6 +94,7 @@ public class MatchController {
 
   @ResponseStatus(value = HttpStatus.NOT_FOUND, reason = "Resource not found")
   @ExceptionHandler(NoSuchElementException.class)
-  public void notFound() {}
+  public void notFound() {
+  }
 
 }

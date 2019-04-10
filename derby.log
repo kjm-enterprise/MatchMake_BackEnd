@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Tue Apr 09 13:26:31 MDT 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-016a-0390-eeeb-000003786718 
+on database directory memory:C:\Users\Lobo_\Desktop\bootcamp\projects\match-maker\testdb with class loader sun.misc.Launcher$AppClassLoader@42a57993 
+Loaded from file:/C:/Users/Lobo_/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_191-b12
+user.dir=C:\Users\Lobo_\Desktop\bootcamp\projects\match-maker
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
