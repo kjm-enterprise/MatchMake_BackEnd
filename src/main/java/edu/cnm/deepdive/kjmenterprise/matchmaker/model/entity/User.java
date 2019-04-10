@@ -1,3 +1,7 @@
+/**
+ * @authors Kanyon Wyman, Michael Sanchez, James Mattos
+ * @version 1.0
+ */
 package edu.cnm.deepdive.kjmenterprise.matchmaker.model.entity;
 
 import java.util.Set;
@@ -9,8 +13,16 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import org.hibernate.annotations.GenericGenerator;
 
+/**
+ * Entity class for storing the Users info
+ */
+
 @Entity
 public class UserStorage {
+
+  /**
+   * generates the uuid for the user
+   */
 
   @Id
   @GeneratedValue(generator = "uuid2")
@@ -18,6 +30,10 @@ public class UserStorage {
   @Column(name = "user_id", columnDefinition = "CHAR(16) FOR BIT DATA",
       nullable = false, updatable = false)
   private UUID id;
+
+  /**
+   * Set the contents and lines of the table
+   */
 
   @Column(nullable = true, updatable = true)
   private String userMessages;
@@ -27,6 +43,10 @@ public class UserStorage {
 
   @Column(nullable = false, updatable = true)
   private Long userPhotos;
+
+  /**
+   * creates many to many relationships from user to user
+   */
 
   @ManyToMany
   Set<UserStorage> matches;

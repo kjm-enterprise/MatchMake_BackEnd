@@ -1,3 +1,7 @@
+/**
+ * @authors Kanyon Wyman, Michael Sanchez, James Mattos
+ * @version 1.0
+ */
 package edu.cnm.deepdive.kjmenterprise.matchmaker.model.entity;
 
 import java.util.Date;
@@ -13,12 +17,20 @@ import org.springframework.lang.NonNull;
 
 public class UserDecision {
 
+  /**
+   * Generates uuid for location on the user
+   */
+
   @Id
   @GeneratedValue(generator = "uuid2")
   @GenericGenerator(name = "uuid2", strategy = "uuid2")
   @Column(name = "location_id", columnDefinition = "CHAR(16) FOR BIT DATA",
       nullable = false, updatable = false)
   private UUID id;
+
+  /**
+   * creates and labels columns for the location table
+   */
 
   @Column(nullable = false, updatable = false)
   private String city;

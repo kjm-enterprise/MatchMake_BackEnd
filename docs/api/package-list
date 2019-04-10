@@ -1,0 +1,5 @@
+edu.cnm.deepdive.kjmenterprise.matchmaker
+edu.cnm.deepdive.kjmenterprise.matchmaker.controller
+edu.cnm.deepdive.kjmenterprise.matchmaker.model.dao
+edu.cnm.deepdive.kjmenterprise.matchmaker.model.entity
+edu.cnm.deepdive.kjmenterprise.matchmaker.view

@@ -1,3 +1,7 @@
+/**
+ * @authors Kanyon Wyman, Michael Sanchez, James Mattos
+ * @version 1.0
+ */
 package edu.cnm.deepdive.kjmenterprise.matchmaker.model.entity;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -22,6 +26,10 @@ import org.springframework.hateoas.EntityLinks;
 @Entity
 public class Match implements FlatMatch {
 
+  /**
+   * Reaction enum to determine whether 2 matches are matched, not matched, or haven't seen each other
+   */
+
   private enum Reactions {
     POSITIVE,
     NEUTRAL,
@@ -31,6 +39,9 @@ public class Match implements FlatMatch {
   private static EntityLinks entityLinks;
 
 
+  /**
+   * Creates uuid for the user
+   */
 
   @Id
   @GeneratedValue(generator = "uuid2")
@@ -41,6 +52,10 @@ public class Match implements FlatMatch {
   public void setId(UUID id) {
     this.id = id;
   }
+
+  /**
+   * Fetches matches and turns them into Json format
+   */
 
   @JsonSerialize(contentAs = FlatMatch.class)
   @ManyToMany(fetch = FetchType.LAZY, mappedBy = "matches", cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
