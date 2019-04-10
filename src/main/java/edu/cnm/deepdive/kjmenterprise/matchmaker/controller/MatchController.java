@@ -33,8 +33,6 @@ public class MatchController {
 
   /**
    * auto wires the bean on the setter method
-   * @param
-   * @return
    */
 
   @Autowired
