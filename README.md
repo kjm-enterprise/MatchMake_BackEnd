@@ -116,13 +116,9 @@ another gamer (although this isn’t the intended purpose, but love happens)
 
 ## Third Party Libraries & Services
 
-[Google GSON](https://github.com/google/gson)
+[Maven](https://github.com/apache/maven) and [Derby](https://github.com/apache/derby)
 
-Used to convert Java objects into JSON then back
-
-[Facebook Stetho](https://github.com/facebook/stetho)
-
-Used to see if the the databases were talking to each other.
+Used to pretty myuch run the entire backend of the project. 
 
 [Google SignIn](https://github.com/googlesamples/google-services/tree/master/android/signin)
 
