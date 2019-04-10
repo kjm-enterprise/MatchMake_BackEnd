@@ -110,8 +110,7 @@ another gamer (although this isn’t the intended purpose, but love happens)
 
 [DDL Placeholder]()
 
-[Back End JavaDoc]()
-
+[Back End JavaDoc](docs/api)
 
 
 ## Third Party Libraries & Services
