@@ -1,5 +1,6 @@
 package edu.cnm.deepdive.kjmenterprise.matchmaker.model.dao;
 
-public interface MatchDao {
+//INTERFACE NOT NEEDED!!!
+public interface UserLocationDao {
 
 }

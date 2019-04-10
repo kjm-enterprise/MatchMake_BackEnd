@@ -11,7 +11,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 import org.springframework.lang.NonNull;
 
-public class Location {
+public class UserDecision {
 
   @Id
   @GeneratedValue(generator = "uuid2")

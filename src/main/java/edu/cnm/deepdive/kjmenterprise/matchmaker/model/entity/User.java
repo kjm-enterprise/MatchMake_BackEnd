@@ -1,5 +1,6 @@
 package edu.cnm.deepdive.kjmenterprise.matchmaker.model.entity;
 
+import java.awt.Image;
 import java.util.UUID;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,7 +9,7 @@ import javax.persistence.Id;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-public class UserStorage {
+public class User {
 
   @Id
   @GeneratedValue(generator = "uuid2")
@@ -24,7 +25,7 @@ public class UserStorage {
   private String userMatches;
 
   @Column(nullable = false, updatable = true)
-  private Long userPhotos;
+  private Image userPhotos;
 
   public UUID getId() {
     return id;
@@ -50,11 +51,11 @@ public class UserStorage {
     this.userMatches = userMatches;
   }
 
-  public Long getUserPhotos() {
+  public Image getUserPhotos() {
     return userPhotos;
   }
 
-  public void setUserPhotos(Long userPhotos) {
+  public void setUserPhotos(Image userPhotos) {
     this.userPhotos = userPhotos;
   }
 }

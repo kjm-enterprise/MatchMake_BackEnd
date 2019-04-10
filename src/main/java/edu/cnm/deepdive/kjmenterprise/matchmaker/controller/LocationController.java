@@ -1,13 +1,10 @@
 package edu.cnm.deepdive.kjmenterprise.matchmaker.controller;
 
 import edu.cnm.deepdive.kjmenterprise.matchmaker.model.dao.LocationDao;
-import edu.cnm.deepdive.kjmenterprise.matchmaker.model.dao.MatchDao;
+import edu.cnm.deepdive.kjmenterprise.matchmaker.model.dao.UserLocationDao;
 import edu.cnm.deepdive.kjmenterprise.matchmaker.model.dao.UserStorageDao;
-import edu.cnm.deepdive.kjmenterprise.matchmaker.model.entity.Location;
-import edu.cnm.deepdive.kjmenterprise.matchmaker.model.entity.Match;
+import edu.cnm.deepdive.kjmenterprise.matchmaker.model.entity.UserDecision;
 import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.Set;
 import java.util.UUID;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +13,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,41 +23,45 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@ExposesResourceFor(Location.class)
+@ExposesResourceFor(UserDecision.class)
 @RequestMapping("/locations")
 public class LocationController {
 
   private LocationDao locationDao;
-  private MatchDao matchDao;
+  private UserLocationDao mUserLocationDao;
   private UserStorageDao userStorageDao;
 
   @Autowired
-  public LocationController(LocationDao locationDao, MatchDao matchDao,
+  public LocationController(LocationDao locationDao, UserLocationDao userLocationDao,
       UserStorageDao userStorageDao) {
     this.locationDao = locationDao;
-    this.matchDao = matchDao;
+    this.mUserLocationDao = userLocationDao;
     this.userStorageDao = userStorageDao;
   }
 
   @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-  public List<Location> list() {
+  public List<UserDecision> list() {
+    return null;
     //TODO Return Something
   }
 
   @GetMapping(value = "search", produces = MediaType.APPLICATION_JSON_VALUE)
-  public List<Location> search(@RequestParam("q") String fragment) {
+  public List<UserDecision> search(@RequestParam("q") String fragment) {
+    return null;
     //TODO Return Something
   }
 
   @GetMapping(value = "{sourceId}", produces = MediaType.APPLICATION_JSON_VALUE)
-  public Location get(@PathVariable("sourceId") UUID sourceId) {
+  public UserDecision get(@PathVariable("sourceId") UUID sourceId) {
+    return null;
     //TODO Return Something
   }
 
   @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE,
       produces = MediaType.APPLICATION_JSON_VALUE)
   @ResponseStatus(value = HttpStatus.CREATED)
-  public ResponseEntity<Location> post(@RequestBody Location location) {
+  public ResponseEntity<UserDecision> post(@RequestBody UserDecision userDecision) {
+    return null;
     //TODO Return something
   }
 
@@ -69,7 +69,7 @@ public class LocationController {
   @DeleteMapping(value = "{sourceId}")
   @ResponseStatus(HttpStatus.NO_CONTENT)
   public void delete(@PathVariable("sourceId") UUID sourceId) {
-    Location source = get(sourceId);
+    UserDecision source = get(sourceId);
     
   }
 }
